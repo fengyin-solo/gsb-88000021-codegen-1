@@ -19,8 +19,8 @@ defineProps({
       <span>说明</span>
     </div>
     <div
-      v-for="row in rows"
-      :key="`${row.title}-${row.owner}`"
+      v-for="(row, index) in rows"
+      :key="`${row.title}-${row.owner}-${index}`"
       class="task-row"
     >
       <span>{{ row.title }}</span>
